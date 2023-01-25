@@ -1,6 +1,7 @@
 (* https://adventofcode.com/2022/day/2 *)
 (* input data: https://adventofcode.com/2022/day/2/input *)
 
+print_endline ("------ Day 2 ------ ")
 
 (* Read the input file line by line *)
 let read_whole_file filename =
@@ -14,7 +15,12 @@ let read_whole_file filename =
     close_in chan;
     List.rev !lines
 
-let input_data = read_whole_file "input_aoc_day2.txt" ;;
+let input_data = read_whole_file "/Users/kgoldmann/Documents/Projects/adventofcode/data/input_aoc_day2.txt" ;;
+
+(* print input_data *)
+(* List.iter print_endline input_data ;; *)
+
+
 
 (* Get first column in input_data*)
 let opponent_column = List.map (fun x -> String.sub x 0 1) input_data ;;
@@ -49,7 +55,7 @@ let hand_outcome = List.map hand_score my_hand_column ;;
 let total_score (hand: int) (game: int) : int =  hand + game ;;
 let total_outcome = List.map2 total_score hand_outcome game_outcome ;;
 let total = List.fold_left (+) 0 total_outcome ;;
-print_endline ("Part 1 solution: " ^ string_of_int total) ;;
+print_endline ("- Part 1 solution: " ^ string_of_int total) ;;
 
 
 
@@ -88,5 +94,5 @@ let values = List.map2 score_match opponent_game_outcome end_game_outcome ;;
 
 (* calculate the total score *)
 let total_score = List.fold_left (+) 0 values ;;
-print_endline ("Part 2 solution: " ^ string_of_int total_score) ;;
+print_endline ("- Part 2 solution: " ^ string_of_int total_score) ;;
 

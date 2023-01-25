@@ -8,8 +8,14 @@
 *.cmxs
 *.cmxa
 
+*.DS_Store
+*a.out
+
 # ocamlbuild working directory
 _build/
+
+# input files
+data
 
 # ocamlbuild targets
 *.byte
@@ -27,3 +33,4 @@ setup.log
 
 # Local OPAM switch
 _opam/
+

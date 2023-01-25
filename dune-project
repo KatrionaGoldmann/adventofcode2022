@@ -5,20 +5,24 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github KatrionaGoldmann/adventofcode2022))
 
-(authors "Author Name")
+(authors "Katriona Goldmann")
 
-(maintainers "Maintainer Name")
+(maintainers "Katriona Goldmann")
 
 (license LICENSE)
 
-(documentation https://url/to/documentation)
+(documentation https://github.com/KatrionaGoldmann/adventofcode2022/issues/)
+
+
 
 (package
  (name adventofcode)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (bug_reports "https://github.com/KatrionaGoldmann/adventofcode2022/issues")
+ (homepage "https://github.com/KatrionaGoldmann/adventofcode2022/issues")
+ (synopsis "Ocaml code for the 2022 advent of code")
+ (description "Ocaml code for the 2022 advent of code")
  (depends ocaml dune)
  (tags
   (topics "to describe" your project)))

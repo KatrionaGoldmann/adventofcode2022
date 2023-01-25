@@ -1,1 +1,7 @@
-let () = print_endline "Hello, World!"
+open Adventofcode
+
+let main () = 
+  let input = 
+  
+
+let () = main() ;;
