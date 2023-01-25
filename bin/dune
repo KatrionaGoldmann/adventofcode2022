@@ -1,4 +1,4 @@
 (executable
  (public_name adventofcode)
  (name main)
- (libraries adventofcode))
+ (libraries adventofcode str))

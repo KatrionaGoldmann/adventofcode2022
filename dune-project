@@ -13,7 +13,7 @@
 
 (license LICENSE)
 
-(documentation https://github.com/KatrionaGoldmann/adventofcode2022/issues/)
+(documentation https://github.com/KatrionaGoldmann/adventofcode2022/)
 
 
 

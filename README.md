@@ -34,7 +34,7 @@ See [here](https://dune.readthedocs.io/en/stable/dune-files.html#dune-project) f
 To enable browsable documentation, add an URL to the dune-project file, e.g.:
 
 ```sh
-(documentation https://github.com/KatrionaGoldmann/adventofcode2022/issues)
+(documentation https://github.com/KatrionaGoldmann/adventofcode2022/)
 ```
 
 You will need to re-install the project for this to take effect.
@@ -42,6 +42,32 @@ You will need to re-install the project for this to take effect.
 ```sh
 dune build
 dune install
-
 odig browse online-doc adventofcode
 ```
+
+To populate the mli files, the easiest thing to do is to run:
+
+```sh
+ocamlc -i aoc_day2.ml > aoc_day2.mli
+```
+
+---
+
+## Pulling in Dependencies
+
+To pull in dependencies, you can use opam.
+    
+```sh
+opam install <package>
+```
+
+For some packages you may need to add them to ./bin/dune in order for build to work. An example of this is `str` which is a standard library for ocaml. So in `./bin/dune` add the str argument:
+
+```
+(executable
+ (public_name adventofcode)
+ (name main)
+ (libraries adventofcode str))
+```
+
+
