@@ -10,3 +10,4 @@ val end_game_score : string -> outcome
 val opponent_game_score : string -> move
 val find_move : move * outcome -> move
 val score_match : move -> outcome -> int
+(** The score of a given game (hand score + outcome score).*)

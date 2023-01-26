@@ -51,6 +51,14 @@ To populate the mli files, the easiest thing to do is to run:
 ocamlc -i aoc_day2.ml > aoc_day2.mli
 ```
 
+Then you can edit these. To populate the index file with lib documentation, you need to add a public_name to the `./lib/dune` file, so it becomes:
+
+```
+(library
+ (public_name adventofcode)
+ (name adventofcode))
+```
+
 ---
 
 ## Pulling in Dependencies
