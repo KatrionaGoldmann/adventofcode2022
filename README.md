@@ -21,6 +21,25 @@ dune build
 dune exec adventofcode
 ```
 
+## Pulling in Dependencies
+
+To pull in dependencies, you can use opam.
+    
+```sh
+opam install <package>
+```
+
+For some packages you may need to add them to ./bin/dune in order for build to work. An example of this is `str` which is a standard library for ocaml. So in `./bin/dune` add the str argument:
+
+```
+(executable
+ (public_name adventofcode)
+ (name main)
+ (libraries adventofcode str))
+```
+
+## Package Documentation
+
 To view the documentation for the project, run:
 
 ```sh
@@ -68,9 +87,8 @@ dune build @doc
 
 Useful reference for formatting comments/documentation [here](http://ocamlverse.net/content/documentation_guidelines.html), [here](https://v2.ocaml.org/manual/ocamldoc.html#s%3Aocamldoc-comments), and [here](https://v2.ocaml.org/releases/4.10/htmlman/doccomments.html). 
 
----
 
-## Installing and documenting with opam
+## Installing and Documenting with opam
 
 In the working directory, run:
 
@@ -96,21 +114,26 @@ odig doc adventofcode
 
 ---
 
-## Pulling in Dependencies
+## Publishing the package
 
-To pull in dependencies, you can use opam.
-    
+The package can be published to opam by following [these](
+https://opam.ocaml.org/doc/Packaging.html#Publishing) instructions.
+
+You may need to install opam-publish first which requires openssl so you may need to install that first.
+
 ```sh
-opam install <package>
+brew install openssl
+opam install opam-publish
 ```
 
-For some packages you may need to add them to ./bin/dune in order for build to work. An example of this is `str` which is a standard library for ocaml. So in `./bin/dune` add the str argument:
+Then you can publish the package by running:
 
+```sh
+opam publish
 ```
-(executable
- (public_name adventofcode)
- (name main)
- (libraries adventofcode str))
-```
+
+---
+
+
 
 

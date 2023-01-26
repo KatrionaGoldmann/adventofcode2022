@@ -3,11 +3,14 @@
     This module contains aset of functions to calculate RPS outcomes, 
     and the hand positions required to achieve such outcomes.
 
-    {2 Rule Book:}
+    {2 Rule Book}
     - Rock beats Scissors 
     - Scissors beats Paper 
     - Paper beats Rock 
+
+    {2 Constructors}
     *)
+
 
 type outcome = Loss | Draw | Win
 (** Constructor to define the possible types of match outcome.*)
@@ -15,6 +18,7 @@ type outcome = Loss | Draw | Win
 type move = Rock | Paper | Scissors
 (** Constructor to define the possible hand shapes or moves (RPS regulation).*)
 
+(** {2 Values}*)
 val read_whole_file : string -> string list
 (** Reads in the two-column input file line by line *)
 
