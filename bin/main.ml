@@ -29,9 +29,9 @@ let day1 () =
 
 let () = day1 ()
 
-let day2 () = 
+let day2 (file: string) = 
   (* Import the data*)
-  let input_data = Aoc_day2.read_whole_file "/Users/kgoldmann/Documents/Projects/adventofcode/data/input_aoc_day2.txt" in
+  let input_data = Aoc_day2.read_whole_file file in
   let opponent_column = List.map (fun x -> String.sub x 0 1) input_data in
   let my_hand_column = List.map (fun x -> String.sub x 2 1) input_data in
   let game_outcome = List.map2 Aoc_day2.win_lose_draw opponent_column my_hand_column in
@@ -51,4 +51,4 @@ let day2 () =
   print_endline ("- Part 1 solution: " ^ string_of_int total) ;
   print_endline ("- Part 2 solution: " ^ string_of_int total_score) ;; 
   
-let () = day2 ()
+let () = day2 ("/Users/kgoldmann/Documents/Projects/adventofcode/data/input_aoc_day2.txt")

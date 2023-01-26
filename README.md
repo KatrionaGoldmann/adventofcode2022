@@ -59,6 +59,41 @@ Then you can edit these. To populate the index file with lib documentation, you 
  (name adventofcode))
 ```
 
+:rotating_light: **warning** :rotating_light:: Dune does cache so sometimes you will need to "clean" the system for the docs to work. You can tell when this becomes an issue as some of the links go dead. To fix simply try: 
+
+```sh
+dune clean     
+dune build @doc
+```
+
+Useful reference for formatting comments/documentation [here](http://ocamlverse.net/content/documentation_guidelines.html), [here](https://v2.ocaml.org/manual/ocamldoc.html#s%3Aocamldoc-comments), and [here](https://v2.ocaml.org/releases/4.10/htmlman/doccomments.html). 
+
+---
+
+## Installing and documenting with opam
+
+In the working directory, run:
+
+```sh
+opam build .
+opam install .
+```
+
+Then you can: 
+
+```sh
+opam show adventofcode
+```
+
+And view the documentation with odig
+
+```sh
+odig odoc
+odig doc # it should now appear here
+odig doc adventofcode
+```
+:partying_face: !
+
 ---
 
 ## Pulling in Dependencies

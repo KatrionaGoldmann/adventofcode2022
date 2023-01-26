@@ -1,6 +1,7 @@
 (lang dune 3.6)
 
 (name adventofcode)
+(version df95bfc-dirty)
 
 (generate_opam_files true)
 

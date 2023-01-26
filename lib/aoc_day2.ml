@@ -14,6 +14,7 @@ let read_whole_file filename =
   with End_of_file ->
     close_in chan;
     List.rev !lines
+  ;;
 
 (* ---------- Part 1 ---------- *)
 (* calculate the outcome of the game*)
@@ -61,6 +62,7 @@ let find_move (opponent, outcome) =
   | Rock, Draw | Paper, Loss | Scissors, Win -> Rock
   | Rock, Win | Paper, Draw | Scissors, Loss -> Paper
   | Rock, Loss | Paper, Win | Scissors, Draw -> Scissors
+;;
 
 (* Calculate the score, given the opponents have and the outcome*)
 let score_match (opponent: move) (outcome: outcome) : int =
@@ -68,6 +70,7 @@ let score_match (opponent: move) (outcome: outcome) : int =
   let shape_score = match me with Rock -> 1 | Paper -> 2 | Scissors -> 3 in
   let outcome_score = match outcome with Loss -> 0 | Draw -> 3 | Win -> 6 in
   shape_score + outcome_score
+;;
 
 
 
